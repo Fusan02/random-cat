@@ -21,10 +21,13 @@ const CatImage = ({ url }: CatImageProps) => {
 
   return (
     <div className={styles.page}>
-      <button onClick={refreshImage} className={styles.button}>
+      <button
+        onClick={refreshImage}
+        className={`${styles.button} ${styles.button_cat}`}
+      >
         他のニャンコも見る
       </button>
-      <div className={styles.frame}>
+      <div className={`${styles.frame} ${styles.frame_cat}`}>
         {imageUrl && <img src={imageUrl} className={styles.img} />}
       </div>
     </div>
